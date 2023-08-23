@@ -1,0 +1,53 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "firebase": "^9.21.0",
+    "http-proxy-middleware": "^2.0.6",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-error-overlay": "^6.0.9",
+    "react-firebaseui": "^6.0.0",
+    "react-router-dom": "^6.8.2",
+    "react-scripts": "^4.0.3",
+    "web-vitals": "^2.1.4"
+  },
+  "proxy": "http://localhost:8080",
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint-report": "eslint --output-file eslint-report.json --format json src/",
+    "lint-terminal": "eslint src/",
+    "lint": "npm run lint-report; npm run lint-terminal;"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "jsx-a11y/anchor-is-valid": 0,
+      "react-hooks/exhaustive-deps": 0
+    },
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
